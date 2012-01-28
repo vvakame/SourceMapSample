@@ -1,0 +1,6 @@
+CoffeeScript compile.
+@cake watch@
+
+JavaScript minify. and create SourceMap file.
+@cake compile@
+
