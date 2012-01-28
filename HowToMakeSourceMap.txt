@@ -1,0 +1,3 @@
+# user ClosureCompile latest.
+java -jar ./compiler.jar *.js --create_source_map source-map.json --source_map_format V3 --js_output_file compiled.js
+
