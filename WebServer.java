@@ -87,19 +87,15 @@ public class WebServer {
 								properties.getProperty(extension));
 					} else {
 						System.out
-								.println("could not filnd content type definitions for: "
+								.println("could not field content type definitions for: "
 										+ extension);
 					}
 					exchange.getResponseHeaders().add("Content-Length",
 							String.valueOf(file.length()));
 
 					if (".js".equals(extension)) {
-						/*
-						 * exchange.getResponseHeaders().add("X-SourceMap",
-						 * filePath + ".map");
-						 */
 						exchange.getResponseHeaders().add("X-SourceMap",
-								"source-map.json");
+								file.getName() + ".map");
 					}
 
 					exchange.sendResponseHeaders(200, file.length());
